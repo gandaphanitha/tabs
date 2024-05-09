@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs Project</title>
+    <link rel="stylesheet" href="./tab.css">
+</head>
+
+<body>
+
+    <div class="section-center">
+        <div class="image">
+            <img src="https://t4.ftcdn.net/jpg/06/44/64/49/360_F_644644908_uIYJYFIZE019oztZagHdxBOMyCfKSaHt.jpg" alt="">
+            <!-- <img src="https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt=""> -->
+        </div>
+        <div class="tabs">
+            <div class="btn-container">
+                <button class="button live" data-id="step1">Step 1</button>
+                <button class="button" data-id="step2">Step 2</button>
+                <button class="button" data-id="step3">Step 3</button>
+            </div>
+            <div class="content live" id="step1">
+                <h3>Step 1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum sint cumque quasi, amet impedit
+                    tempore necessitatibus iste. Ratione possimus perspiciatis sapiente, ex alias, ipsam sint beatae
+                    vel repellat aperiam corrupti porro et molestiae nobis itaque recusandae vitae atque! Reiciendis
+                    voluptatum molestiae autem consectetur corporis libero itaque quo mollitia quod! Corrupti
+                    doloribus veniam iusto soluta laborum saepe debitis reiciendis atque nihil eaque ducimus quo
+                    ullam ipsum, laboriosam velit vitae sint, </p>
+            </div>
+            <div class="content" id="step2">
+                <h3>Step 2</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae doloremque enim
+                    deleniti voluptatum necessitatibus, facilis et quas, quasi magni obcaecati iusto ipsam ipsum
+                    amet autem labore dignissimos accusantium dolorem perspiciatis non harum, alias vel a
+                    asperiores? Qui amet tempora mollitia quos, facilis debitis nemo praesentium, optio facere
+                    nostrum, eum totam magnam quasi laborum sint repellendus quibusdam vero? Ipsum explicabo
+                    officiis culpa delectus quasi cumque saepe voluptates accusantium voluptatem omnis iste, sequi
+                    beatae quae dolor vero nostrum at amet eum dolores ut. Autem velit eius, libero adipisci dolore
+                    harum accusantium ipsum, voluptate ad recusandae vitae blanditiis? Harum nihil molestiae cum!
+                </p>
+
+            </div>
+            <div class="content" id="step3">
+                <h3>Step 3</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, asperiores magnam? In
+                    expedita laudantium magnam ratione alias minus nemo incidunt, dignissimos architecto placeat
+                    corporis molestiae labore vitae ullam laborum ut culpa eaque officiis, blanditiis sunt fugit ex?
+                    Neque quod mollitia delectus ipsa? Dolore veritatis, tenetur laudantium possimus unde debitis
+                    enim est illum, ea distinctio quod itaque quaerat ex sint eum optio in saepe labore sunt odit?
+                    Dolore, iusto! Ducimus sint laudantium consectetur. Velit facere culpa excepturi ad, quae
+                    distinctio iure incidunt. Odio alias laboriosam unde quo repudiandae corporis laborum quaerat
+                    asperiores minima quis in nam maxime recusandae iure, provident a?
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btns = document.querySelectorAll(".button");
+        const contents = document.querySelectorAll(".content");
+
+        btns.forEach((btn, index) => {
+            btn.addEventListener("click", function () {
+                // Remove 'live' class from all buttons
+                btns.forEach((btn) => btn.classList.remove("live"));
+                // Add 'live' class to the clicked button
+                this.classList.add("live");
+                // Hide all contents
+                contents.forEach((content) => content.classList.remove("live"));
+                // Show the corresponding content
+                contents[index].classList.add("live");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+The "live" class in this context serves as a marker or indicator to identify which button and content are currently active or should be displayed. Here's why the "live" class is important in this scenario:
+
+Toggle Visibility: The "live" class is used to toggle the visibility of buttons and content. When a button has the "live" class, it indicates that it is currently active, and its corresponding content should be displayed.
+Styling: By using a specific class like "live", you can easily apply CSS styles to the active elements. For example, you might want to change the color or add a border to the active button to highlight it.
+Clear and Readable Code: Using a named class like "live" makes the code more readable and understandable. It clearly indicates the purpose of the class and its role in controlling the visibility of elements.
+Maintainability: If you need to change the behavior or styling of the active elements in the future, having a designated class like "live" makes it easier to make adjustments without having to modify the JavaScript code directly. -->
